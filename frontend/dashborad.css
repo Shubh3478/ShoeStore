@@ -1,0 +1,220 @@
+    :root {
+      --black: #1d1d1d;
+      --orange: #ff6600;
+      --gray: #555;
+      --light-gray: #f0f0f0;
+      --border-color: #ccc;
+      --font-main: 'Nunito', sans-serif;
+      --error-color: #e74c3c;
+      --success-color: #2ecc71;
+    }
+
+    * {
+      font-family: var(--font-main);
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: all 0.2s linear;
+    }
+
+    html {
+      font-size: 62.5%;
+      overflow-x: hidden;
+      scroll-padding-top: 6rem;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f4f4f4;
+    }
+
+    /* ===== Header ===== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: #fff;
+      padding: 2rem 9%;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    header .logo {
+      font-size: 2.5rem;
+      color: var(--black);
+      font-weight: bold;
+    }
+
+    header .navbar a {
+      font-size: 1.7rem;
+      color: var(--black);
+      margin: 0 1rem;
+    }
+
+    header .navbar a:hover {
+      color: var(--orange);
+    }
+
+    header .icons a {
+      font-size: 2.5rem;
+      color: var(--black);
+      margin-left: 1.5rem;
+    }
+
+    header .icons a:hover {
+      color: var(--orange);
+    }
+
+    /* ===== Main Section ===== */
+    main {
+      padding: 12rem 4rem 4rem; /* Added top padding to avoid overlap with fixed header */
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--black);
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    /* ===== Profile Section ===== */
+    .profile-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .image-section {
+      text-align: center;
+    }
+
+    #profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 1rem;
+      border: 2px solid var(--border-color);
+    }
+
+    .info {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      color: var(--gray);
+      text-align: left;
+      min-width: 250px;
+    }
+
+    .info div {
+      margin-bottom: 1.5rem;
+    }
+
+    .info input {
+      padding: 0.8rem;
+      font-size: 1.6rem;
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    .info input:disabled {
+      background-color: var(--light-gray);
+      width: 350px;
+    }
+
+    .info input:enabled {
+      width: 350px;
+    }
+
+    /* ===== Password Change Section ===== */
+    .password-change {
+      display: none;
+      margin-top: 2rem;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin: 2rem auto;
+    }
+
+    .password-change h3 {
+      font-size: 2rem;
+      color: var(--black);
+      margin-bottom: 1.5rem;
+    }
+
+    .password-change input {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+    }
+
+    .password-change .btn-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    /* ===== Buttons ===== */
+    .edit-btn,
+    .save-btn,
+    .logout-btn,
+    .change-password-btn,
+    .submit-password-btn,
+    .cancel-password-btn {
+      padding: 1rem 2rem;
+      background-color: var(--black);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.6rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .edit-btn:hover,
+    .save-btn:hover,
+    .logout-btn:hover,
+    .change-password-btn:hover,
+    .submit-password-btn:hover,
+    .cancel-password-btn:hover {
+      background-color: var(--orange);
+      color: white;
+    }
+
+    .cancel-password-btn {
+      background-color: var(--gray);
+    }
+
+    .message {
+      font-size: 1.6rem;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 5px;
+      display: none;
+    }
+
+    .error {
+      background-color: #fdecea;
+      color: var(--error-color);
+      border: 1px solid var(--error-color);
+      display: block;
+    }
+
+    .success {
+      background-color: #e8f5e9;
+      color: var(--success-color);
+      border: 1px solid var(--success-color);
+      display: block;
+    }
