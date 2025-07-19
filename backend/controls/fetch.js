@@ -1,7 +1,7 @@
 
 
 const User = require('../models/userdata');
-const bcrypt = require('bcrypt'); // Uncomment if using hashed passwords
+const bcrypt = require('bcryptjs'); // Uncomment if using hashed passwords
 
 const getUser = async (req, res) => {
     try {
