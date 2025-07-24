@@ -427,7 +427,7 @@
           newPassword:document.querySelector('#new-password').value,
         };
         try{
-          const res = await fetch("https://stepstyle.onrender.com/changepassword", {
+          const res = await fetch("https://stepstyle.onrender.com/api/changepassword", {
             method:"PUT",
             headers:{
               "Content-Type":"application/json"
