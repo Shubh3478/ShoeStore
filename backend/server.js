@@ -18,7 +18,7 @@ app.use(express.json())
 app.use('/api', userrouter)
 
 app.listen(port, ()=>{
-    // console.log(`http://localhost:${port}`);
+    console.log(`http://localhost:${port}`);
 })
 app.get('/', (req, res)=>{
     res.sendFile(path.join(__dirname, '../frontend/index.html'))
